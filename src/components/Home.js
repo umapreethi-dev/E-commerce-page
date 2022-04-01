@@ -1,17 +1,18 @@
 import data from "./ProductData";
 import Productcard from "./Productcard";
 
-export default function Home() {
-  const productData = data.map((item,index) => {
+export default function Home({ cart, setCart }) {
+  const productData = data.map((item, index) => {
     return (
       <Productcard
         id={index}
-        key={item.id}
         img={item.img}
         name={item.name}
         price={item.price}
         pricecut={item.pricecut}
         discountPrice={item.discountPrice}
+        cart={cart}
+        setCart={setCart}
       />
     );
   });

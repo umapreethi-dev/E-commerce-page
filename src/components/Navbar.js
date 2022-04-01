@@ -13,7 +13,7 @@ export default function Navbar(props){
                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <NavLink class="nav-link active" aria-current="page" to="/">Home</NavLink>
+                        <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">About</a>
@@ -33,8 +33,8 @@ export default function Navbar(props){
                     
                 </ul>
                 <form class="d-flex">
-                 <NavLink to="/cart">Cart</NavLink>   
-                <button class="btn btn-outline-dark" type="submit"><span><BsFillCartFill/></span>Cart {props.cart}</button>
+                   
+                <button class="btn btn-outline-dark" type="submit"><span><BsFillCartFill/></span> <NavLink className="cart-link" to="/cart">Cart</NavLink> <span className="cart-value">{props.cart.length}</span></button>
                 </form>
             </div>
          </div>
